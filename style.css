@@ -1,0 +1,73 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+  margin: 0;
+  padding: 20px;
+  color: #0f172a;
+}
+
+h1, h2 {
+  color: #2563eb;
+}
+
+header {
+  padding: 20px;
+  background: #2563eb;
+  color: #fff;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background .3s;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+.btn i {
+  margin-right: 6px;
+}
+
+/* Menú principal */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Galerías */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  max-width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+

@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Infografía: Examen clínico y contención en bovinos</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: #f9fafb;
+      color: #0f172a;
+      scroll-behavior: smooth;
+    }
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    p.lead {
+      color: #475569;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      padding: 18px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .step {
+      background: #f1f5f9;
+      padding: 14px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .step:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+    .icon {
+      font-size: 2rem;
+      color: #2563eb;
+      margin-bottom: 8px;
+    }
+    .step h3 {
+      margin: 6px 0;
+      font-size: 1rem;
+    }
+    .step p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #475569;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+    .step img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .step img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+    .btn {
+      display: inline-block;
+      margin: 5px;
+      padding: 8px 14px;
+      background: #2563eb;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: background .2s;
+    }
+    .btn i {
+      margin-right: 6px;
+    }
+    .btn:hover {
+      background: #1d4ed8;
+    }
+    /* Modal genérico */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal.open {
+      display: flex;
+    }
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+    .close-btn {
+      position: absolute;
+      top: 20px; right: 30px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Infografía: Examen clínico general y contención en bovinos - Por Catalina Medina</h1>
+      <p class="lead">Basado en la guía clínica (páginas 5–25) de la Universidad Nacional de México UNAM.</p>
+    </header>
+
+    <!-- Métodos de contención física -->
+    <section class="card">
+      <h2>Métodos de contención física</h2>
+      <p>A los bovinos se les debe de manejar de forma tranquila, firme y confiada sin causarles estrés ni dolor. Se debe de hacer todo lo posible para no lesionar al animal, porque los malos procedimientos en el manejo ponen en peligro su salud y dificultan la maniobra en futuras revisiones.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="icon"><i class="fa-solid fa-hand"></i></div>
+          <h3>Contención manual</h3>
+          <p>Útil en animales dóciles o terneros. Sujeción directa de cabeza, orejas, cola o extremidades.</p>
+          <img src="img/sujecion-derribo-bovinos.jpg" alt="Contención manual" onclick="openModal(this)">
+        </div>
+        <div class="step">
+          <div class="icon"><i class="fa-solid fa-link"></i></div>
+          <h3>Sogas y cabestros</h3>
+          <p>Permiten controlar la cabeza y el cuello. Evitan movimientos bruscos durante exploraciones.</p>
+          <img src="img/accesorios_gnado_bovino.jpg" alt="Sogas y cabestro" onclick="openModal(this)">
+        </div>
+        <div class="step">
+          <div class="icon"><i class="fa-solid fa-door-closed"></i></div>
+          <h3>Bertes o cepos</h3>
+          <p>Estructuras metálicas o de madera para inmovilización prolongada y segura, facilitando exámenes y procedimientos al inmovilizar el animal en pasillos estrechos.</p>
+          <img src="img/manga.jpg" alt="Manga de contención" onclick="openModal(this)">
+        </div>
+        <div class="step">
+          <div class="icon"><i class="fa-solid fa-cow"></i></div>
+          <h3>Derribo controlado</h3>
+          <p>Solo en casos necesarios y por personal entrenado (ej. método de Reuff).</p>
+          <img src="img/metodo.jpg" alt="Derribo controlado" onclick="openModal(this)">
+        </div>
+      </div>
+    </section>
+
+    <!-- Pasos del examen clínico general -->
+    <section class="card">
+      <h2>Pasos del examen clínico general</h2>
+      <div class="steps">
+        <div class="step"><h3>Historia clínica</h3><p>Es el registro de toda la información relevante de un paciente para evaluar su estado de salud y orientar un diagnóstico. Incluye reseña, anamnesis, signos vitales, examen físico, diagnósticos, tratamientos, cirugías, medicina preventiva y la revisión de los diferentes sistemas del cuerpo. A partir de estos datos, el médico formula una hipótesis sobre las posibles alteraciones, considerando diagnósticos diferenciales para descartar enfermedades similares. Finalmente, el diagnóstico se confirma mediante pruebas de laboratorio, estudios de imagen u otros métodos, lo que permite definir el tratamiento, la prevención y control de la enfermedad.</p></div>
+        <div class="step"><h3>Reseña</h3><p>La reseña del paciente es básicamente la recopilación de los datos de identificación del animal.Conteniendo la información básica como número de expediente, especie, raza, sexo, edad, identificación (arete, hierro o muesca), alzada, color, señas particulares, el trabajo que realiza, fecha y lugar de la reseña, así como los datos del propietario (nombre, dirección y teléfono). Este tipo de reseña es clave en casos de enfermedades graves o zoonosis, como la rabia, para poder actuar con rapidez.</p></div>
+        <div class="step"><h3>Anamnesis</h3><p>La anamnesis es el interrogatorio que se hace al dueño o encargado del animal para obtener información sobre sus antecedentes y síntomas. Incluye aspectos individuales, ambientales, hereditarios y patológicos. Para que sea útil, las preguntas deben ser claras, comprensibles y cordiales, evitando términos médicos complicados. El objetivo es recopilar datos confiables que permitan orientar el diagnóstico hacia el órgano, aparato o sistema afectado.</p></div>
+      </div>
+    </section>
+
+    <!-- Examen físico -->
+    <section class="card">
+      <h2>Examen físico</h2>
+      <p>El examen físico general es una guía fundamental para orientar el diagnóstico y detectar el aparato o sistema afectado. Para hacerlo correctamente, se debe seguir un orden: primero evaluar las constantes fisiológicas y luego aplicar los métodos de inspección, palpación, percusión y auscultación, entre otros.</p>
+      <button onclick="openImg()">Constantes fisiológicas normales</button>
+    </section>
+
+    <!-- Historia clínica PDF -->
+    <section class="card">
+      <h2>Historia clínica</h2>
+      <button onclick="openPdf()">Ver Historia Clínica</button>
+    </section>
+
+    <!-- Métodos físicos y complementarios -->
+    <section class="card">
+      <h2>Métodos físicos y complementarios de exploración</h2>
+      <div class="menu">
+        <a class="btn" href="inspeccion.html"><i class="fa-solid fa-eye"></i> Inspección</a>
+        <a class="btn" href="palpacion.html"><i class="fa-solid fa-hand"></i> Palpación</a>
+        <a class="btn" href="percusion.html"><i class="fa-solid fa-drum"></i> Percusión</a>
+        <a class="btn" href="puscultacion.html"><i class="fa-solid fa-stethoscope"></i> Auscultación</a>
+        <a class="btn" href="olfacion.html"><i class="fa-solid fa-wind"></i> Olfación</a>
+      </div>
+    </section>
+  </div>
+<!-- Otros aspectos clave --> <section class="card"> <h2>Otros aspectos clave</h2> <ul> <li>Mucosas y linfonodos: evaluar color, humedad, inflamación.</li> <li>Cronometria: determinar edad por desgaste dentario.</li> <li>Diagnóstico: establecer diagnóstico presuntivo, diferencial y confirmativo.</li> </ul> </section> <!-- Notas de seguridad --> <section class="card"> <h2>Notas de seguridad</h2> <ul> <li>Evaluar temperamento antes de elegir contención.</li> <li>Derribo solo si es indispensable y por personal entrenado.</li> <li>Priorizar bienestar animal y seguridad humana.</li> </ul> </section> </div>
+  <!-- Modal imágenes -->
+  <div id="imgModal" class="modal" onclick="closeModal()">
+    <span class="close-btn">&times;</span>
+    <img class="modal-content" id="modalImg" alt="imagen ampliada">
+  </div>
+
+  <!-- Modal PDF -->
+  <div id="pdfModal" class="modal" onclick="closePdf()">
+    <span class="close-btn">&times;</span>
+    <embed src="historia-clinica.pdf" type="application/pdf" width="80%" height="600px" />
+  </div>
+
+  <script>
+    // Modal imágenes
+    function openModal(img) {
+      const modal = document.getElementById('imgModal');
+      const modalImg = document.getElementById('modalImg');
+      modal.classList.add('open');
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+    }
+    function closeModal() {
+      document.getElementById('imgModal').classList.remove('open');
+    }
+
+    // Modal PDF
+    function openPdf() {
+      document.getElementById('pdfModal').classList.add('open');
+    }
+    function closePdf() {
+      document.getElementById('pdfModal').classList.remove('open');
+    }
+
+    // Modal imagen de constantes
+    function openImg() {
+      document.getElementById('imgModal').classList.add('open');
+      document.getElementById('modalImg').src = "constantes.png";
+    }
+  </script>
+</body>
+</html>
